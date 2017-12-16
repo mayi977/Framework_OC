@@ -1,0 +1,39 @@
+//
+//  Framework_OC-PrefixHeader.pch
+//  Framework_OC
+//
+//  Created by zilu on 2017/12/7.
+//  Copyright © 2017年 zilu. All rights reserved.
+//
+
+#ifndef Framework_OC_PrefixHeader_pch
+#define Framework_OC_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIColor+expand.h"
+#import "UIImage+Common.h"
+#import "NSObject+Common.h"
+#import "NSString+Common.h"
+#import "UIView+Common.h"
+#import <Masonry.h>
+
+
+#define kWindow [UIApplication sharedApplication].keyWindow
+#define kAppDelegate (AppDelegate)[UIApplication sharedApplication].delegate
+#define kScreen_Bounds [UIScreen mainScreen].bounds
+#define kScreen_Width [UIScreen mainScreen].bounds.size.width
+#define kScreen_Height [UIScreen mainScreen].bounds.size.height
+
+#define kScaleFrom_iPhone5_Desgin(_X_) (_X_ * (kScreen_Width/320))
+
+#define kDevice_Is_iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+
+#endif /* Framework_OC_PrefixHeader_pch */
