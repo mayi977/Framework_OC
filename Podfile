@@ -32,6 +32,8 @@ pod 'RDVTabBarController', '~> 1.1.9' #自定义tabbarController
 pod 'ReactiveObjC', '~> 3.0.0' #ReactiveCocoa（简称：RAC）；具有函数响应式编程特性；具有高聚合低耦合特点
 pod 'TPKeyboardAvoiding', '~> 1.3.2' #解决键盘被遮挡
 pod 'CocoaAsyncSocket', '~> 7.6.2' #socket:http://blog.csdn.net/wlm0813/article/details/51255097
+pod 'JDStatusBarNotification'  #用以在顶部的状态栏展示信息。可自定义颜色、字体以及动画。支持进度条展示，并可以显示活动指示器。
+pod 'MBProgressHUD' #MBProgressHUD是一个显示HUD窗口的第三方类库，用于在执行一些后台任务时，在程序中显示一个表示进度的loading视图和两个可选的文本提示的HUD窗口。
 
 
 #pod 'TTTAttributedLabel', '1.10.1'

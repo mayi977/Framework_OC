@@ -13,6 +13,8 @@
 #import "IntroductionViewController.h"
 #import "Login.h"
 #import "RootTabBarController.h"
+#import "LoginViewController.h"
+#import "BaseNavigationController.h"
 
 #define _IPHONE80_ 80000
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
@@ -46,12 +48,6 @@
     return YES;
 }
 
-- (void)setupTabBarController{
-    RootTabBarController *rootTBC = [[RootTabBarController alloc] init];
-    rootTBC.tabBar.translucent = YES;
-    [self.window setRootViewController:rootTBC];
-}
-
 - (void)registerUserAgent{
     NSLog(@"%@",NSHomeDirectory());
     NSString *userAgent = [NSString userAgent];
@@ -71,6 +67,17 @@
     [[UITextField appearance] setTintColor:[UIColor colorWithHexString:@"0x2EBE76"]];//光标颜色
     [[UITextView appearance] setTintColor:[UIColor colorWithHexString:@"0x2EBE76"]];//光标颜色
     [[UISearchBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"0xF2F4F6"]] forBarPosition:0 barMetrics:UIBarMetricsDefault];
+}
+
+- (void)setupTabBarController{
+    RootTabBarController *rootTBC = [[RootTabBarController alloc] init];
+    rootTBC.tabBar.translucent = YES;
+    [self.window setRootViewController:rootTBC];
+}
+
+- (void)setupLoginViewController{
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    [self.window setRootViewController:[[BaseNavigationController alloc] initWithRootViewController:vc] ];
 }
 
 //引导页

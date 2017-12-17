@@ -11,5 +11,6 @@
 @interface UIImage (Common)
 
 + (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)imageZoomLeftCapWidth:(CGFloat)leftRatio topCapWidth:(CGFloat)topCapRatio;//伸缩某个位置(以某个点为基准) Ratio：比例
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "AppDelegate.h"
 #import "Login.h"
 #import <TPKeyboardAvoidingTableView.h>
 #import "Input_OnlyText_Cell.h"
@@ -23,14 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    btn.bounds = CGRectMake(0, 0, 100, 40);
-//    btn.center = self.view.center;
-//    btn.backgroundColor = [UIColor redColor];
-//    [btn addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
+    self.login.email = [Login preUserEmail];
     
     self.tableView = ({
         TPKeyboardAvoidingTableView *tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -58,6 +50,7 @@
 }
 
 - (UIView *)customHeaderView{
+//    CGFloat 
     return nil;
 }
 
@@ -74,7 +67,33 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    Input_OnlyText_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    __weak typeof(self) weakSelf = self;
+    if (indexPath.row == 0) {
+        cell.textField.keyboardType = UIKeyboardTypeEmailAddress;
+        [cell setPlaceholder:@" 手机号码/电子邮箱/个性后缀" value:self.login.email];
+        cell.editDidBeginBlock = ^(NSString *text) {
+            //
+        };
+        cell.textValueChangedBlock = ^(NSString *text) {
+            weakSelf.login.email = text;
+        };
+        cell.editDidEndBlock = ^(NSString *text) {
+            //
+        };
+    }else if (indexPath.row == 1){
+        [cell setPlaceholder:@"密码" value:self.login.password];
+        cell.textField.secureTextEntry = YES;
+        cell.editDidBeginBlock = ^(NSString *text) {
+            //
+        };
+        cell.textValueChangedBlock = ^(NSString *text) {
+            weakSelf.login.password = text;
+        };
+        cell.editDidEndBlock = ^(NSString *text) {
+            //
+        };
+    }
     
     return cell;
 }
@@ -84,10 +103,6 @@
         _login = [[Login alloc] init];
     }
     return _login;
-}
-
-- (void)btnClicked{
-    [(AppDelegate *)[[UIApplication sharedApplication] delegate] setupTabBarController];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

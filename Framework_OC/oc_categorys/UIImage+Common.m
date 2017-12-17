@@ -28,4 +28,14 @@
     return image;
 }
 
+- (UIImage *)imageZoomLeftCapWidth:(CGFloat)leftRatio topCapWidth:(CGFloat)topCapRatio{
+    return [self stretchableImageWithLeftCapWidth:self.size.width * leftRatio topCapHeight:self.size.height * topCapRatio];
+}
+
+/*
+ 拉伸某个区域
+ [self resizableImageWithCapInsets:<#(UIEdgeInsets)#>];
+ [self resizableImageWithCapInsets:<#(UIEdgeInsets)#> resizingMode:<#(UIImageResizingMode)#>];
+ */
+
 @end

@@ -11,7 +11,7 @@
 #import "NSObject+ObjectMap.h"
 
 static User *currentUser;
-
+#define loginUserEmail @"loginUserEmail"
 @implementation Login
 
 - (instancetype)init{
@@ -62,6 +62,11 @@ static User *currentUser;
     }
     
     return currentUser;
+}
+
++ (NSString *)preUserEmail{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults objectForKey:loginUserEmail];
 }
 
 @end

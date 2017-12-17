@@ -10,4 +10,6 @@
 
 @interface NSObject (Common)
 
++ (NSString *)baseUrlStr;
+
 @end

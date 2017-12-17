@@ -20,5 +20,6 @@
 + (User *)currentLoginUser;
 
 - (NSDictionary *)toParmas;
++ (NSString *)preUserEmail;
 
 @end
