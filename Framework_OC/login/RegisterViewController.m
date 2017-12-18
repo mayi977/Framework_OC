@@ -14,7 +14,7 @@
 #import <TTTAttributedLabel.h>
 
 #define paddingLeftWidth 18
-@interface RegisterViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface RegisterViewController ()<UITableViewDelegate,UITableViewDataSource,TTTAttributedLabelDelegate>
 
 @property (nonatomic,strong) Register *myRegister;
 @property (nonatomic,strong) TPKeyboardAvoidingTableView *tableView;
@@ -30,7 +30,11 @@
     self.navigationItem.title = @"注册";
     _tableView = ({
         TPKeyboardAvoidingTableView *tableview = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        [tableview registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:@"cell"];
+        [tableview registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:cellInentifier_name];
+        [tableview registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:cellInentifier_phone];
+        [tableview registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:cellInentifier_psw];
+        [tableview registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:cellInentifier_code];
+        [tableview registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:cellInentifier_email];
         tableview.backgroundColor = [UIColor colorWithHexString:@"0xf2f4f6"];
         tableview.delegate = self;
         tableview.dataSource = self;
@@ -100,10 +104,10 @@
                                                                     return @(name.length > 0 && phone.length > 0 && password.length > 0 && code.length > 0);
                                                                 }];
     
-    TTTAttributedLabel *label = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(paddingLeftWidth, CGRectGetMidY(_registerBtn.bounds) + CGRectGetHeight(_registerBtn.bounds) + 10, kScreen_Width - paddingLeftWidth*2, 90)];
+    TTTAttributedLabel *label = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(paddingLeftWidth, CGRectGetMidY(_registerBtn.bounds) + CGRectGetHeight(_registerBtn.bounds) + 10, kScreen_Width - paddingLeftWidth*2, 20)];
     label.backgroundColor = [UIColor blueColor];
     
-    
+    label.textAlignment = 1;
     label.lineBreakMode = NSLineBreakByWordWrapping;
     label.numberOfLines = 0;
     //enabledTextCheckingTypes要放在text, with either setText: or setText:afterInheritingLabelAttributesAndConfiguringWithBlock:前面才有效.
@@ -114,15 +118,25 @@
     label.activeLinkAttributes = @{NSForegroundColorAttributeName:[UIColor redColor],NSUnderlineStyleAttributeName:@(1)};
     
     //文本赋值
-    [label setText:@"shflsadkjnkjsadhfliweuhflwdhfl" afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
-        NSRange fontRange = [[mutableAttributedString string] rangeOfString:@"232846192472376" options:NSCaseInsensitiveSearch];
-        
-        return mutableAttributedString;
-    }];
+//    [label setText:@"shflsadkjnkjsadhfliweuhflwdhfl" afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+//        NSRange fontRange = [[mutableAttributedString string] rangeOfString:@"232846192472376" options:NSCaseInsensitiveSearch];
+//
+//        return mutableAttributedString;
+//    }];
+    
+    label.delegate = self;
+    NSString *str = @"注册就代表您已经同意《协议》";
+    label.text = str;
+    [label addLinkToTransitInformation:@{@"actionStr":@"gotoHtmlView"} withRange:[str rangeOfString:@"《协议》"]];
+    
     
     [footerView addSubview:label];
     
     return footerView;
+}
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTransitInformation:(NSDictionary *)components{
+    NSLog(@"aefjaslhdflashflaksjdflkjdsfsd");
 }
 
 - (void)configBottomView{
@@ -148,7 +162,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    Input_OnlyText_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSString *idnetifier = indexPath.row == 0 ? cellInentifier_name : indexPath.row == 1 ? cellInentifier_phone : indexPath.row == 2 ? cellInentifier_psw : indexPath.row == 3 ? cellInentifier_code : cellInentifier_email;
+    Input_OnlyText_Cell *cell = [tableView dequeueReusableCellWithIdentifier:idnetifier forIndexPath:indexPath];
     __weak typeof(self) weakSelf = self;
     if (indexPath.row == 0) {
         //name
@@ -162,6 +177,9 @@
         cell.textValueChangedBlock = ^(NSString *text) {
             weakSelf.myRegister.phone = text;
         };
+        cell.countryBtnClicked = ^{
+            NSLog(@"ahfkasfiasf");
+        };
     }else if (indexPath.row == 2){
         //password
         [cell setPlaceholder:@"设置密码" value:self.myRegister.password];
@@ -173,6 +191,9 @@
         [cell setPlaceholder:@"手机验证码" value:self.myRegister.code];
         cell.textValueChangedBlock = ^(NSString *text) {
             weakSelf.myRegister.code = text;
+        };
+        cell.codeBtnClicked = ^{
+            NSLog(@"ahfkasfiasf");
         };
     }else if (indexPath.row == 4){
         //email
