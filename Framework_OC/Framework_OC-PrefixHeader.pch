@@ -19,7 +19,8 @@
 #import "NSString+Common.h"
 #import "UIView+Common.h"
 #import <Masonry.h>
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 
 #define kWindow [UIApplication sharedApplication].keyWindow
 #define kAppDelegate (AppDelegate)[UIApplication sharedApplication].delegate

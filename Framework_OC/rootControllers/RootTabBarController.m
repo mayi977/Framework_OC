@@ -13,7 +13,6 @@
 #import "Project_RootViewController.h"
 #import "Tweet_RootViewController.h"
 #import "BaseNavigationController.h"
-#import <ReactiveObjC.h>
 #import <RDVTabBarItem.h>
 
 @interface RootTabBarController ()

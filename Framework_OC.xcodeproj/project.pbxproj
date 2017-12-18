@@ -86,6 +86,11 @@
 		3E8EA1671FD961AE00966B96 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8EA1661FD961AE00966B96 /* Launch Screen.storyboard */; };
 		49973D8FAFD90D0F9E106534 /* libPods-Framework_OCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 873653D431162364EB71C5FB /* libPods-Framework_OCUITests.a */; };
 		4E279F527C081D0B44F0DFE4 /* libPods-Framework_OCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271E5C964C4B177D8B323DC7 /* libPods-Framework_OCTests.a */; };
+		6887DE881FE753C400EC7B19 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6887DE871FE753C400EC7B19 /* UIButton+Bootstrap.m */; };
+		6887DE8B1FE753D500EC7B19 /* UIButton+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6887DE8A1FE753D500EC7B19 /* UIButton+Common.m */; };
+		6887DE8D1FE78AE900EC7B19 /* dismissBtn_Nav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DE8C1FE78AE800EC7B19 /* dismissBtn_Nav@2x.png */; };
+		6887DE901FE78F7B00EC7B19 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 6887DE8F1FE78F7B00EC7B19 /* Register.m */; };
+		6887DE931FE7987000EC7B19 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6887DE921FE7987000EC7B19 /* UIBarButtonItem+Common.m */; };
 		688ECE491FE25BF900AA3C94 /* NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE481FE25BF900AA3C94 /* NetAPIManager.m */; };
 		688ECE4C1FE2622A00AA3C94 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE4B1FE2622A00AA3C94 /* NetAPIClient.m */; };
 		688ECE4F1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE4E1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m */; };
@@ -224,6 +229,15 @@
 		463540868F21CC455B2FF386 /* Pods-Framework_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework_OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Framework_OC/Pods-Framework_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		51C346295222068F6E842ADC /* libPods-Framework_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Framework_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5CE7547A1B67096328FAC6 /* Pods-Framework_OCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework_OCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Framework_OCUITests/Pods-Framework_OCUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6887DE861FE753C400EC7B19 /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
+		6887DE871FE753C400EC7B19 /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
+		6887DE891FE753D500EC7B19 /* UIButton+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Common.h"; sourceTree = "<group>"; };
+		6887DE8A1FE753D500EC7B19 /* UIButton+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Common.m"; sourceTree = "<group>"; };
+		6887DE8C1FE78AE800EC7B19 /* dismissBtn_Nav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dismissBtn_Nav@2x.png"; sourceTree = "<group>"; };
+		6887DE8E1FE78F7B00EC7B19 /* Register.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
+		6887DE8F1FE78F7B00EC7B19 /* Register.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
+		6887DE911FE7987000EC7B19 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
+		6887DE921FE7987000EC7B19 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
 		688ECE471FE25BF900AA3C94 /* NetAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetAPIManager.h; sourceTree = "<group>"; };
 		688ECE481FE25BF900AA3C94 /* NetAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetAPIManager.m; sourceTree = "<group>"; };
 		688ECE4A1FE2622A00AA3C94 /* NetAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetAPIClient.h; sourceTree = "<group>"; };
@@ -302,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				688ECE501FE3BD6700AA3C94 /* text_clear_btn@2x.png */,
+				6887DE8C1FE78AE800EC7B19 /* dismissBtn_Nav@2x.png */,
 				3E7BFF691FDD665E00F80082 /* tabbar */,
 				3E7BFEF11FDAF6DA00F80082 /* introduction */,
 			);
@@ -360,6 +375,12 @@
 				3E7BFF511FDC2CFD00F80082 /* NSObject+ObjectMap.m */,
 				3E7012881FDD725400E63418 /* UIView+Common.h */,
 				3E7012891FDD725400E63418 /* UIView+Common.m */,
+				6887DE861FE753C400EC7B19 /* UIButton+Bootstrap.h */,
+				6887DE871FE753C400EC7B19 /* UIButton+Bootstrap.m */,
+				6887DE891FE753D500EC7B19 /* UIButton+Common.h */,
+				6887DE8A1FE753D500EC7B19 /* UIButton+Common.m */,
+				6887DE911FE7987000EC7B19 /* UIBarButtonItem+Common.h */,
+				6887DE921FE7987000EC7B19 /* UIBarButtonItem+Common.m */,
 			);
 			path = oc_categorys;
 			sourceTree = "<group>";
@@ -380,6 +401,8 @@
 			children = (
 				3E7BFF4A1FDC29AF00F80082 /* Login.h */,
 				3E7BFF4B1FDC29AF00F80082 /* Login.m */,
+				6887DE8E1FE78F7B00EC7B19 /* Register.h */,
+				6887DE8F1FE78F7B00EC7B19 /* Register.m */,
 				3E7BFF4D1FDC2ADE00F80082 /* User.h */,
 				3E7BFF4E1FDC2ADE00F80082 /* User.m */,
 			);
@@ -682,6 +705,7 @@
 				3E7BFF7F1FDD66C700F80082 /* task_selected@3x.png in Resources */,
 				3E7BFF911FDD66C700F80082 /* privatemessage_normal@3x.png in Resources */,
 				3E7BFF1E1FDAF72E00F80082 /* intro_tip_4@2x.png in Resources */,
+				6887DE8D1FE78AE900EC7B19 /* dismissBtn_Nav@2x.png in Resources */,
 				3E7BFF101FDAF72E00F80082 /* intro_icon_4@2x.png in Resources */,
 				3E7BFF191FDAF72E00F80082 /* intro_dot_selected@2x.png in Resources */,
 				3E7BFF141FDAF72E00F80082 /* intro_icon_5@2x.png in Resources */,
@@ -896,17 +920,21 @@
 				3E7BFF5C1FDC3EF300F80082 /* Mine_RootViewController.m in Sources */,
 				3E7BFF591FDC3E9D00F80082 /* BaseNavigationController.m in Sources */,
 				3E8A3B221FD94F12002B3F7D /* ViewController.m in Sources */,
+				6887DE8B1FE753D500EC7B19 /* UIButton+Common.m in Sources */,
 				3E7BFF4C1FDC29AF00F80082 /* Login.m in Sources */,
 				3E7BFF561FDC3DD200F80082 /* RootTabBarController.m in Sources */,
 				3E7BFF621FDC3F2F00F80082 /* Task_RootViewController.m in Sources */,
 				3E8A3B2D1FD94F12002B3F7D /* main.m in Sources */,
+				6887DE931FE7987000EC7B19 /* UIBarButtonItem+Common.m in Sources */,
 				688ECE491FE25BF900AA3C94 /* NetAPIManager.m in Sources */,
 				3E7BFF5F1FDC3F1100F80082 /* Message_RootViewController.m in Sources */,
 				3E7BFF481FDC194600F80082 /* NSString+Common.m in Sources */,
 				688ECE4F1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m in Sources */,
 				3E7BFF451FDBF81E00F80082 /* NSObject+Common.m in Sources */,
 				3E7BFF3C1FDBEE3800F80082 /* LoginViewController.m in Sources */,
+				6887DE901FE78F7B00EC7B19 /* Register.m in Sources */,
 				3E8A3B1F1FD94F12002B3F7D /* AppDelegate.m in Sources */,
+				6887DE881FE753C400EC7B19 /* UIButton+Bootstrap.m in Sources */,
 				3E7BFF311FDAF86300F80082 /* UIColor+expand.m in Sources */,
 				688ECE4C1FE2622A00AA3C94 /* NetAPIClient.m in Sources */,
 				3E70128A1FDD725400E63418 /* UIView+Common.m in Sources */,
