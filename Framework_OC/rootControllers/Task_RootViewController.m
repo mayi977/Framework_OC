@@ -7,8 +7,13 @@
 //
 
 #import "Task_RootViewController.h"
+//#import <iCarousel.h>
 
+#define sengmentControl_height 44.0
 @interface Task_RootViewController ()
+
+//@property (nonatomic,strong) iCarousel *icarousel;
+@property (nonatomic,strong) NSArray *titles;
 
 @end
 
@@ -16,7 +21,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"任务";
+    self.titles = @[@"全部任务",@"当前任务"];
+    [self setupNavRightItem];
+    [self setTopView];
+}
+
+- (void)setupNavRightItem{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClicked:)];
+}
+
+- (void)setTopView{
+//    self.icarousel = ({
+//        iCarousel *icarousel = [[iCarousel alloc] initWithFrame:CGRectZero];
+//        icarousel.delegate = self;
+//        icarousel.dataSource = self;
+//        icarousel.decelerationRate = 1.0;
+//        icarousel.scrollSpeed = 1.0;
+//        icarousel.type = iCarouselTypeLinear;
+//        icarousel.pagingEnabled = YES;
+//        icarousel.clipsToBounds = YES;
+//        icarousel.bounceDistance = 0.2;
+//        [self.view addSubview:icarousel];
+//        [icarousel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(sengmentControl_height, 0, 0, 0));
+//        }];
+//
+//        icarousel;
+//    });
+//
+//    __weak typeof weakSelf = self;
+//    self.
+}
+
+- (void)rightItemClicked:(id)sender{
+    
 }
 
 - (void)didReceiveMemoryWarning {

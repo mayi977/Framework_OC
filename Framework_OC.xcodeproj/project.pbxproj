@@ -95,6 +95,19 @@
 		6887DE8D1FE78AE900EC7B19 /* dismissBtn_Nav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DE8C1FE78AE800EC7B19 /* dismissBtn_Nav@2x.png */; };
 		6887DE901FE78F7B00EC7B19 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 6887DE8F1FE78F7B00EC7B19 /* Register.m */; };
 		6887DE931FE7987000EC7B19 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6887DE921FE7987000EC7B19 /* UIBarButtonItem+Common.m */; };
+		6887DE961FE8EE2B00EC7B19 /* addBtn_Nav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DE941FE8EE2800EC7B19 /* addBtn_Nav@2x.png */; };
+		6887DE971FE8EE2B00EC7B19 /* addBtn_Nav@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DE951FE8EE2A00EC7B19 /* addBtn_Nav@3x.png */; };
+		6887DEC91FE9045300EC7B19 /* pop_Project@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEBE1FE9045100EC7B19 /* pop_Project@2x.png */; };
+		6887DECA1FE9045300EC7B19 /* pop_User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEBF1FE9045100EC7B19 /* pop_User@3x.png */; };
+		6887DECB1FE9045300EC7B19 /* pop_User@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC01FE9045200EC7B19 /* pop_User@2x.png */; };
+		6887DECC1FE9045300EC7B19 /* pop_Tweet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC11FE9045200EC7B19 /* pop_Tweet@3x.png */; };
+		6887DECD1FE9045300EC7B19 /* pop_Task@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC21FE9045200EC7B19 /* pop_Task@2x.png */; };
+		6887DECE1FE9045300EC7B19 /* pop_2FA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC31FE9045200EC7B19 /* pop_2FA@2x.png */; };
+		6887DECF1FE9045300EC7B19 /* pop_Message@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC41FE9045200EC7B19 /* pop_Message@3x.png */; };
+		6887DED01FE9045300EC7B19 /* pop_Project@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC51FE9045200EC7B19 /* pop_Project@3x.png */; };
+		6887DED11FE9045300EC7B19 /* pop_Tweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC61FE9045300EC7B19 /* pop_Tweet@2x.png */; };
+		6887DED21FE9045300EC7B19 /* pop_2FA@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC71FE9045300EC7B19 /* pop_2FA@3x.png */; };
+		6887DED31FE9045300EC7B19 /* pop_Task@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887DEC81FE9045300EC7B19 /* pop_Task@3x.png */; };
 		688ECE491FE25BF900AA3C94 /* NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE481FE25BF900AA3C94 /* NetAPIManager.m */; };
 		688ECE4C1FE2622A00AA3C94 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE4B1FE2622A00AA3C94 /* NetAPIClient.m */; };
 		688ECE4F1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE4E1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m */; };
@@ -246,6 +259,19 @@
 		6887DE8F1FE78F7B00EC7B19 /* Register.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
 		6887DE911FE7987000EC7B19 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
 		6887DE921FE7987000EC7B19 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
+		6887DE941FE8EE2800EC7B19 /* addBtn_Nav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addBtn_Nav@2x.png"; sourceTree = "<group>"; };
+		6887DE951FE8EE2A00EC7B19 /* addBtn_Nav@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addBtn_Nav@3x.png"; sourceTree = "<group>"; };
+		6887DEBE1FE9045100EC7B19 /* pop_Project@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Project@2x.png"; sourceTree = "<group>"; };
+		6887DEBF1FE9045100EC7B19 /* pop_User@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_User@3x.png"; sourceTree = "<group>"; };
+		6887DEC01FE9045200EC7B19 /* pop_User@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_User@2x.png"; sourceTree = "<group>"; };
+		6887DEC11FE9045200EC7B19 /* pop_Tweet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Tweet@3x.png"; sourceTree = "<group>"; };
+		6887DEC21FE9045200EC7B19 /* pop_Task@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Task@2x.png"; sourceTree = "<group>"; };
+		6887DEC31FE9045200EC7B19 /* pop_2FA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_2FA@2x.png"; sourceTree = "<group>"; };
+		6887DEC41FE9045200EC7B19 /* pop_Message@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Message@3x.png"; sourceTree = "<group>"; };
+		6887DEC51FE9045200EC7B19 /* pop_Project@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Project@3x.png"; sourceTree = "<group>"; };
+		6887DEC61FE9045300EC7B19 /* pop_Tweet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Tweet@2x.png"; sourceTree = "<group>"; };
+		6887DEC71FE9045300EC7B19 /* pop_2FA@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_2FA@3x.png"; sourceTree = "<group>"; };
+		6887DEC81FE9045300EC7B19 /* pop_Task@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_Task@3x.png"; sourceTree = "<group>"; };
 		688ECE471FE25BF900AA3C94 /* NetAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetAPIManager.h; sourceTree = "<group>"; };
 		688ECE481FE25BF900AA3C94 /* NetAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetAPIManager.m; sourceTree = "<group>"; };
 		688ECE4A1FE2622A00AA3C94 /* NetAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetAPIClient.h; sourceTree = "<group>"; };
@@ -323,6 +349,19 @@
 		3E7BFEF01FDAF6CB00F80082 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6887DEC31FE9045200EC7B19 /* pop_2FA@2x.png */,
+				6887DEC71FE9045300EC7B19 /* pop_2FA@3x.png */,
+				6887DEC41FE9045200EC7B19 /* pop_Message@3x.png */,
+				6887DEBE1FE9045100EC7B19 /* pop_Project@2x.png */,
+				6887DEC51FE9045200EC7B19 /* pop_Project@3x.png */,
+				6887DEC21FE9045200EC7B19 /* pop_Task@2x.png */,
+				6887DEC81FE9045300EC7B19 /* pop_Task@3x.png */,
+				6887DEC61FE9045300EC7B19 /* pop_Tweet@2x.png */,
+				6887DEC11FE9045200EC7B19 /* pop_Tweet@3x.png */,
+				6887DEC01FE9045200EC7B19 /* pop_User@2x.png */,
+				6887DEBF1FE9045100EC7B19 /* pop_User@3x.png */,
+				6887DE941FE8EE2800EC7B19 /* addBtn_Nav@2x.png */,
+				6887DE951FE8EE2A00EC7B19 /* addBtn_Nav@3x.png */,
 				3E86B2ED1FE80F520010948A /* password_look@2x.png */,
 				3E86B2EE1FE80F520010948A /* password_look@3x.png */,
 				3E86B2EB1FE80F510010948A /* password_unlook@2x.png */,
@@ -698,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7BFF821FDD66C700F80082 /* tweet_normal@3x.png in Resources */,
+				6887DED01FE9045300EC7B19 /* pop_Project@3x.png in Resources */,
 				3E86B2EF1FE80F520010948A /* password_unlook@2x.png in Resources */,
 				3E7BFF2B1FDAF72E00F80082 /* intro_icon_6@3x.png in Resources */,
 				3E7BFF8F1FDD66C700F80082 /* project_selected@3x.png in Resources */,
@@ -705,6 +745,7 @@
 				3E7BFF171FDAF72E00F80082 /* intro_icon_0@3x.png in Resources */,
 				3E8EA1671FD961AE00966B96 /* Launch Screen.storyboard in Resources */,
 				3E7BFF8E1FDD66C700F80082 /* tweet_normal@2x.png in Resources */,
+				6887DED21FE9045300EC7B19 /* pop_2FA@3x.png in Resources */,
 				3E7BFF181FDAF72E00F80082 /* intro_tip_0@3x.png in Resources */,
 				3E7BFF1B1FDAF72E00F80082 /* intro_tip_3@2x.png in Resources */,
 				3E8A3B271FD94F12002B3F7D /* Assets.xcassets in Resources */,
@@ -712,27 +753,37 @@
 				3E7BFF861FDD66C700F80082 /* me_normal@3x.png in Resources */,
 				3E7BFF8A1FDD66C700F80082 /* me_selected@2x.png in Resources */,
 				3E7BFF111FDAF72E00F80082 /* intro_icon_2@3x.png in Resources */,
+				6887DECF1FE9045300EC7B19 /* pop_Message@3x.png in Resources */,
 				3E7BFF131FDAF72E00F80082 /* intro_tip_2@2x.png in Resources */,
 				3E86B2F11FE80F520010948A /* password_look@2x.png in Resources */,
 				3E7BFF281FDAF72E00F80082 /* intro_icon_5@3x.png in Resources */,
+				6887DE961FE8EE2B00EC7B19 /* addBtn_Nav@2x.png in Resources */,
 				3E7BFF1D1FDAF72E00F80082 /* intro_icon_4@3x.png in Resources */,
 				3E7BFF7F1FDD66C700F80082 /* task_selected@3x.png in Resources */,
 				3E7BFF911FDD66C700F80082 /* privatemessage_normal@3x.png in Resources */,
 				3E7BFF1E1FDAF72E00F80082 /* intro_tip_4@2x.png in Resources */,
 				6887DE8D1FE78AE900EC7B19 /* dismissBtn_Nav@2x.png in Resources */,
+				6887DE971FE8EE2B00EC7B19 /* addBtn_Nav@3x.png in Resources */,
 				3E7BFF101FDAF72E00F80082 /* intro_icon_4@2x.png in Resources */,
 				3E7BFF191FDAF72E00F80082 /* intro_dot_selected@2x.png in Resources */,
 				3E7BFF141FDAF72E00F80082 /* intro_icon_5@2x.png in Resources */,
 				3E7BFF8D1FDD66C700F80082 /* tweet_selected@3x.png in Resources */,
 				3E7BFF291FDAF72E00F80082 /* intro_icon_3@2x.png in Resources */,
+				6887DECE1FE9045300EC7B19 /* pop_2FA@2x.png in Resources */,
 				3E7BFF841FDD66C700F80082 /* project_normal@2x.png in Resources */,
 				3E7BFF851FDD66C700F80082 /* privatemessage_selected@2x.png in Resources */,
+				6887DED11FE9045300EC7B19 /* pop_Tweet@2x.png in Resources */,
+				6887DED31FE9045300EC7B19 /* pop_Task@3x.png in Resources */,
 				3E7BFF251FDAF72E00F80082 /* intro_icon_2@2x.png in Resources */,
 				3E7BFF2A1FDAF72E00F80082 /* intro_dot_unselected@2x.png in Resources */,
 				3E7BFF221FDAF72E00F80082 /* intro_icon_1@2x.png in Resources */,
 				3E7BFF801FDD66C700F80082 /* me_normal@2x.png in Resources */,
 				3E7BFF161FDAF72E00F80082 /* intro_tip_3@3x.png in Resources */,
+				6887DECD1FE9045300EC7B19 /* pop_Task@2x.png in Resources */,
+				6887DECC1FE9045300EC7B19 /* pop_Tweet@3x.png in Resources */,
+				6887DECB1FE9045300EC7B19 /* pop_User@2x.png in Resources */,
 				3E7BFF211FDAF72E00F80082 /* intro_tip_0@2x.png in Resources */,
+				6887DECA1FE9045300EC7B19 /* pop_User@3x.png in Resources */,
 				3E7BFF8C1FDD66C700F80082 /* me_selected@3x.png in Resources */,
 				3E7BFF1A1FDAF72E00F80082 /* intro_tip_2@3x.png in Resources */,
 				3E7BFF1F1FDAF72E00F80082 /* intro_tip_5@2x.png in Resources */,
@@ -753,6 +804,7 @@
 				3E7BFF1C1FDAF72E00F80082 /* intro_dot_selected@3x.png in Resources */,
 				3E7BFF831FDD66C700F80082 /* project_selected@2x.png in Resources */,
 				3E7BFF7E1FDD66C700F80082 /* privatemessage_selected@3x.png in Resources */,
+				6887DEC91FE9045300EC7B19 /* pop_Project@2x.png in Resources */,
 				3E7BFF811FDD66C700F80082 /* tweet_selected@2x.png in Resources */,
 				3E7BFF901FDD66C700F80082 /* privatemessage_normal@2x.png in Resources */,
 			);

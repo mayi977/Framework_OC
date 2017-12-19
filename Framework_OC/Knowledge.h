@@ -44,3 +44,30 @@
  
  
  */
+
+/*
+ iCarousel 是一个使用简单、高度自定义的多类型视图切换的控件，支持iOS/Mac OS、ARC & Thread Safety;
+ iCarousel 轮播样式种类丰富，内置如下：
+ 
+ iCarouselTypeLinear 线性的
+ iCarouselTypeRotary 可旋转的
+ iCarouselTypeInvertedRotary 反向旋转式
+ iCarouselTypeCylinder 圆柱式
+ iCarouselTypeInvertedCylinder  反向圆柱式
+ iCarouselTypeWheel 车轮式
+ iCarouselTypeInvertedWheel 反向车轮式
+ iCarouselTypeCoverFlow 封面流
+ iCarouselTypeCoverflow2 封面流样式2
+ iCarouselTypeTimeMachine 时光机
+ iCarouselTypeInvertedTimeMachine 反向时光机
+ */
+
+/*
+ 1.POP动画引擎是Facebook公司开源的
+ 2.POP动画引擎主要实现了真实物理系的动画效果(弹簧效果与衰减效果)
+ 3.POP动画引擎的动画效果非常流畅, 因为它使用了CADisplayLink来刷新画面(每秒60帧, 接近游戏开发引擎)
+ 4.POP动画引擎自成体系, 与系统的CoreAnimation有着很大的区别, 但使用非常类似
+ 
+ 源码地址:https://github.com/facebook/pop
+ 
+ */

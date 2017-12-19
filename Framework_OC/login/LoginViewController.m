@@ -162,6 +162,7 @@
 }
 
 - (void)loginBtnClicked:(id)sender{
+     [self.view endEditing:YES];
     [(AppDelegate *)[UIApplication sharedApplication].delegate setupTabBarController];
 }
 
@@ -224,6 +225,11 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

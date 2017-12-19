@@ -48,7 +48,8 @@
         }];
     }
     
-    self.textField.textColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor whiteColor];
+    self.textField.textColor = [UIColor colorWithHexString:@"0x222222"];
 }
 
 - (UIButton *)clearBtn{

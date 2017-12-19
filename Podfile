@@ -36,6 +36,8 @@ pod 'CocoaAsyncSocket', '~> 7.6.2' #socket:http://blog.csdn.net/wlm0813/article/
 pod 'JDStatusBarNotification'  #用以在顶部的状态栏展示信息。可自定义颜色、字体以及动画。支持进度条展示，并可以显示活动指示器。
 pod 'MBProgressHUD' #MBProgressHUD是一个显示HUD窗口的第三方类库，用于在执行一些后台任务时，在程序中显示一个表示进度的loading视图和两个可选的文本提示的HUD窗口。
 pod 'TTTAttributedLabel', '~> 2.0.0' #是一个常用的富文本开源库，支持各种属性文本、数据探测器，链接等。
+pod 'iCarousel', '~> 1.8.3'  #iCarousel 是一个使用简单、高度自定义的多类型视图切换的控件
+pod 'PopMenu', '~> 2.4' #菜单的动画  关联的库（pop:动画效果，facebook开源；XHRealTimeBlur:毛玻璃效果）
 
 
 

@@ -105,24 +105,18 @@
                                                                 }];
     
     TTTAttributedLabel *label = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(paddingLeftWidth, CGRectGetMidY(_registerBtn.bounds) + CGRectGetHeight(_registerBtn.bounds) + 10, kScreen_Width - paddingLeftWidth*2, 20)];
-    label.backgroundColor = [UIColor blueColor];
-    
+//    label.backgroundColor = [UIColor blueColor];
+    label.textColor = [UIColor colorWithHexString:@"0x999999"];
     label.textAlignment = 1;
     label.lineBreakMode = NSLineBreakByWordWrapping;
     label.numberOfLines = 0;
     //enabledTextCheckingTypes要放在text, with either setText: or setText:afterInheritingLabelAttributesAndConfiguringWithBlock:前面才有效.
     label.enabledTextCheckingTypes = NSTextCheckingTypePhoneNumber | NSTextCheckingTypeAddress | NSTextCheckingTypeLink;
     //链接正常状态文本属性
-    label.linkAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor],NSUnderlineStyleAttributeName:@(1)};
+    label.linkAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor],NSUnderlineStyleAttributeName:@(0)};
+    //    NSUnderlineStyleAttributeName:@(0) 0:没有下划线   1：有下划线
     //链接高亮状态文本属性
     label.activeLinkAttributes = @{NSForegroundColorAttributeName:[UIColor redColor],NSUnderlineStyleAttributeName:@(1)};
-    
-    //文本赋值
-//    [label setText:@"shflsadkjnkjsadhfliweuhflwdhfl" afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
-//        NSRange fontRange = [[mutableAttributedString string] rangeOfString:@"232846192472376" options:NSCaseInsensitiveSearch];
-//
-//        return mutableAttributedString;
-//    }];
     
     label.delegate = self;
     NSString *str = @"注册就代表您已经同意《协议》";
