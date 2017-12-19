@@ -11,5 +11,7 @@
 @interface NSString (Common)
 
 + (NSString *)userAgent;
+- (BOOL)isPhoneNum;
+- (BOOL)isEmail;
 
 @end

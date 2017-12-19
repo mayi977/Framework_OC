@@ -12,7 +12,8 @@
 @interface Input_OnlyText_Cell()
 
 @property (nonatomic,strong) UIView *lineView;
-@property (nonatomic,strong) UIButton *clearBtn,*pswBtn,*codeBtn;
+@property (nonatomic,strong) UIButton *clearBtn,*pswBtn;
+@property (nonatomic,strong) UIButton *codeBtn;
 
 @end
 
@@ -159,10 +160,10 @@
             }];
         }else if ([reuseIdentifier isEqualToString:cellInentifier_code]){
             if (!_codeBtn) {
-                _codeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-                _codeBtn.frame = CGRectMake(kScreen_Width - 80 - paddingLeftWidth, (44-25)/2, 80, 25);
-                [_codeBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
-                [_codeBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
+                _codeBtn = [[PhoneCodeButton alloc] initWithFrame:CGRectMake(kScreen_Width - 80 - paddingLeftWidth, (44-25)/2, 80, 25)];
+//                _codeBtn.frame = CGRectMake(kScreen_Width - 80 - paddingLeftWidth, (44-25)/2, 80, 25);
+//                [_codeBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+//                [_codeBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
 //                _codeBtn = [[PhoneCodeButton alloc] initWithFrame:CGRectMake(kScreen_Width - 80 - paddingLeftWidth, (44-25)/2, 80, 25)];
                 [_codeBtn addTarget:self action:@selector(codeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
                 [self.contentView addSubview:_codeBtn];
@@ -209,9 +210,9 @@
     [button setImage:[UIImage imageNamed:_textField.secureTextEntry? @"password_unlook": @"password_look"] forState:UIControlStateNormal];
 }
 
-- (void)codeButtonClicked:(id)sender{
+- (void)codeButtonClicked:(PhoneCodeButton *)sender{
     if (self.codeBtnClicked) {
-        self.codeBtnClicked();
+        self.codeBtnClicked(sender);
     }
 }
 

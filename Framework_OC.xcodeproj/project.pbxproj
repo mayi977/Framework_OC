@@ -81,6 +81,7 @@
 		3E86B2F01FE80F520010948A /* password_unlook@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E86B2EC1FE80F510010948A /* password_unlook@3x.png */; };
 		3E86B2F11FE80F520010948A /* password_look@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E86B2ED1FE80F520010948A /* password_look@2x.png */; };
 		3E86B2F21FE80F520010948A /* password_look@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E86B2EE1FE80F520010948A /* password_look@3x.png */; };
+		3E86B2F51FE9617D0010948A /* PhoneCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E86B2F41FE9617D0010948A /* PhoneCodeButton.m */; };
 		3E8A3B1F1FD94F12002B3F7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A3B1E1FD94F12002B3F7D /* AppDelegate.m */; };
 		3E8A3B221FD94F12002B3F7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A3B211FD94F12002B3F7D /* ViewController.m */; };
 		3E8A3B271FD94F12002B3F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A3B261FD94F12002B3F7D /* Assets.xcassets */; };
@@ -229,6 +230,8 @@
 		3E86B2EC1FE80F510010948A /* password_unlook@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_unlook@3x.png"; sourceTree = "<group>"; };
 		3E86B2ED1FE80F520010948A /* password_look@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_look@2x.png"; sourceTree = "<group>"; };
 		3E86B2EE1FE80F520010948A /* password_look@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_look@3x.png"; sourceTree = "<group>"; };
+		3E86B2F31FE9617D0010948A /* PhoneCodeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneCodeButton.h; sourceTree = "<group>"; };
+		3E86B2F41FE9617D0010948A /* PhoneCodeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneCodeButton.m; sourceTree = "<group>"; };
 		3E8A3B1A1FD94F12002B3F7D /* Framework_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Framework_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8A3B1D1FD94F12002B3F7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E8A3B1E1FD94F12002B3F7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				3E7012921FDD913800E63418 /* cells */,
+				3E86B2F31FE9617D0010948A /* PhoneCodeButton.h */,
+				3E86B2F41FE9617D0010948A /* PhoneCodeButton.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -991,6 +996,7 @@
 				6887DE8B1FE753D500EC7B19 /* UIButton+Common.m in Sources */,
 				3E7BFF4C1FDC29AF00F80082 /* Login.m in Sources */,
 				3E7BFF561FDC3DD200F80082 /* RootTabBarController.m in Sources */,
+				3E86B2F51FE9617D0010948A /* PhoneCodeButton.m in Sources */,
 				3E7BFF621FDC3F2F00F80082 /* Task_RootViewController.m in Sources */,
 				3E8A3B2D1FD94F12002B3F7D /* main.m in Sources */,
 				6887DE931FE7987000EC7B19 /* UIBarButtonItem+Common.m in Sources */,

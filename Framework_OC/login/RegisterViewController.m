@@ -186,8 +186,8 @@
         cell.textValueChangedBlock = ^(NSString *text) {
             weakSelf.myRegister.code = text;
         };
-        cell.codeBtnClicked = ^{
-            NSLog(@"ahfkasfiasf");
+        cell.codeBtnClicked = ^(PhoneCodeButton *codeBtn) {
+            [weakSelf codeButtonClicked:codeBtn];
         };
     }else if (indexPath.row == 4){
         //email
@@ -197,6 +197,14 @@
         };
     }
     return cell;
+}
+
+- (void)codeButtonClicked:(PhoneCodeButton *)btn{
+    if (![self.myRegister.phone isPhoneNum]) {
+        //提示框
+        return;
+    }
+    [btn startUpTimer];
 }
 
 - (Register *)myRegister{

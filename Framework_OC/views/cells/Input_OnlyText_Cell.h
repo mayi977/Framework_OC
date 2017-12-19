@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhoneCodeButton.h"
 
 #define cellInentifier_name @"cell_name"
 #define cellInentifier_phone @"cell_phone"
@@ -23,7 +24,7 @@
 @property (nonatomic,copy) void (^editDidEndBlock)(NSString *text);
 @property (nonatomic,copy) void (^textValueChangedBlock)(NSString *text);
 @property (nonatomic,copy) void (^countryBtnClicked)(void);
-@property (nonatomic,copy) void (^codeBtnClicked)(void);
+@property (nonatomic,copy) void (^codeBtnClicked)(PhoneCodeButton *codeBtn);
 
 - (void)setPlaceholder:(NSString *)placeholder value:(NSString *)valueStr;
 

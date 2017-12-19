@@ -22,4 +22,14 @@
     return userAgent;
 }
 
+- (BOOL)isPhoneNum{
+    NSString *phoneRegex = @"[0-9]{1,15}";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+    return [predicate evaluateWithObject:self];
+}
+
+- (BOOL)isEmail{
+    return YES;
+}
+
 @end
