@@ -113,6 +113,10 @@
 		688ECE4C1FE2622A00AA3C94 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE4B1FE2622A00AA3C94 /* NetAPIClient.m */; };
 		688ECE4F1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ECE4E1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m */; };
 		688ECE511FE3BD6700AA3C94 /* text_clear_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688ECE501FE3BD6700AA3C94 /* text_clear_btn@2x.png */; };
+		689930891FE9F6C0009A4CF0 /* ZLSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 689930881FE9F6C0009A4CF0 /* ZLSegmentControl.m */; };
+		6899308C1FEA081F009A4CF0 /* ZLSegmentControlItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6899308B1FEA081F009A4CF0 /* ZLSegmentControlItem.m */; };
+		6899308F1FEA42E1009A4CF0 /* ZLSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6899308E1FEA42E1009A4CF0 /* ZLSegmentView.m */; };
+		689930921FEA4394009A4CF0 /* ZLSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689930911FEA4394009A4CF0 /* ZLSegmentViewController.m */; };
 		FC8110D313EF701E530A230C /* libPods-Framework_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C346295222068F6E842ADC /* libPods-Framework_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -282,6 +286,14 @@
 		688ECE4D1FE3A61C00AA3C94 /* Input_OnlyText_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input_OnlyText_Cell.h; sourceTree = "<group>"; };
 		688ECE4E1FE3A61C00AA3C94 /* Input_OnlyText_Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Input_OnlyText_Cell.m; sourceTree = "<group>"; };
 		688ECE501FE3BD6700AA3C94 /* text_clear_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_clear_btn@2x.png"; sourceTree = "<group>"; };
+		689930871FE9F6C0009A4CF0 /* ZLSegmentControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSegmentControl.h; sourceTree = "<group>"; };
+		689930881FE9F6C0009A4CF0 /* ZLSegmentControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentControl.m; sourceTree = "<group>"; };
+		6899308A1FEA081F009A4CF0 /* ZLSegmentControlItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSegmentControlItem.h; sourceTree = "<group>"; };
+		6899308B1FEA081F009A4CF0 /* ZLSegmentControlItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentControlItem.m; sourceTree = "<group>"; };
+		6899308D1FEA42E1009A4CF0 /* ZLSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSegmentView.h; sourceTree = "<group>"; };
+		6899308E1FEA42E1009A4CF0 /* ZLSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentView.m; sourceTree = "<group>"; };
+		689930901FEA4394009A4CF0 /* ZLSegmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSegmentViewController.h; sourceTree = "<group>"; };
+		689930911FEA4394009A4CF0 /* ZLSegmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentViewController.m; sourceTree = "<group>"; };
 		873653D431162364EB71C5FB /* libPods-Framework_OCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Framework_OCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D20F9A32EA64F6356B1F00 /* Pods-Framework_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Framework_OC/Pods-Framework_OC.release.xcconfig"; sourceTree = "<group>"; };
 		AF352C0CDCCF072D6A9C28C6 /* Pods-Framework_OCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework_OCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Framework_OCUITests/Pods-Framework_OCUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -326,6 +338,7 @@
 		3E7012911FDD912F00E63418 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				689930861FE9F654009A4CF0 /* ZLSegmentControl */,
 				3E7012921FDD913800E63418 /* cells */,
 				3E86B2F31FE9617D0010948A /* PhoneCodeButton.h */,
 				3E86B2F41FE9617D0010948A /* PhoneCodeButton.m */,
@@ -593,6 +606,21 @@
 				688ECE4B1FE2622A00AA3C94 /* NetAPIClient.m */,
 			);
 			path = manager;
+			sourceTree = "<group>";
+		};
+		689930861FE9F654009A4CF0 /* ZLSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				689930871FE9F6C0009A4CF0 /* ZLSegmentControl.h */,
+				689930881FE9F6C0009A4CF0 /* ZLSegmentControl.m */,
+				6899308A1FEA081F009A4CF0 /* ZLSegmentControlItem.h */,
+				6899308B1FEA081F009A4CF0 /* ZLSegmentControlItem.m */,
+				6899308D1FEA42E1009A4CF0 /* ZLSegmentView.h */,
+				6899308E1FEA42E1009A4CF0 /* ZLSegmentView.m */,
+				689930901FEA4394009A4CF0 /* ZLSegmentViewController.h */,
+				689930911FEA4394009A4CF0 /* ZLSegmentViewController.m */,
+			);
+			path = ZLSegmentControl;
 			sourceTree = "<group>";
 		};
 		7473E2A4AE5A42565E66FB5F /* Pods */ = {
@@ -987,10 +1015,14 @@
 				3E7BFF681FDC3FB400F80082 /* Tweet_RootViewController.m in Sources */,
 				3E7BFF521FDC2CFD00F80082 /* NSObject+ObjectMap.m in Sources */,
 				3E7BFEEF1FDAF49A00F80082 /* IntroductionViewController.m in Sources */,
+				689930921FEA4394009A4CF0 /* ZLSegmentViewController.m in Sources */,
 				3E7BFF381FDBEE0B00F80082 /* BaseViewController.m in Sources */,
 				3E70128F1FDD7C4B00E63418 /* ObjcRuntime.m in Sources */,
+				6899308C1FEA081F009A4CF0 /* ZLSegmentControlItem.m in Sources */,
 				3E7BFF651FDC3F7900F80082 /* Project_RootViewController.m in Sources */,
+				689930891FE9F6C0009A4CF0 /* ZLSegmentControl.m in Sources */,
 				3E7BFF5C1FDC3EF300F80082 /* Mine_RootViewController.m in Sources */,
+				6899308F1FEA42E1009A4CF0 /* ZLSegmentView.m in Sources */,
 				3E7BFF591FDC3E9D00F80082 /* BaseNavigationController.m in Sources */,
 				3E8A3B221FD94F12002B3F7D /* ViewController.m in Sources */,
 				6887DE8B1FE753D500EC7B19 /* UIButton+Common.m in Sources */,

@@ -32,4 +32,11 @@
     return YES;
 }
 
+- (CGFloat)getWidthFont:(UIFont *)font textHeigth:(CGFloat)height{
+    
+    
+    return 10;
+}
+
+
 @end

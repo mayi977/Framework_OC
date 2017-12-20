@@ -13,5 +13,6 @@
 + (NSString *)userAgent;
 - (BOOL)isPhoneNum;
 - (BOOL)isEmail;
+- (CGFloat)getWidthFont:(UIFont *)font textHeigth:(CGFloat)height;
 
 @end
