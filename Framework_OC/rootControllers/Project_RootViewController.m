@@ -9,6 +9,7 @@
 #import "Project_RootViewController.h"
 //#import <iCarousel.h>
 #import <PopMenu.h>
+#import "SocketManager.h"
 
 @interface Project_RootViewController ()
 //<iCarouselDelegate,iCarouselDataSource>
@@ -43,6 +44,11 @@
 //
 //        icarousel;
 //    });
+    
+    [SocketManager shareManager].receiveBlock = ^(id data) {
+        NSLog(@"%@",[NSThread currentThread]);
+        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    };
     
     NSArray *menuItems = @[
                            [MenuItem initWithTitle:@"项目" iconName:@"pop_Project" index:0],
@@ -101,6 +107,10 @@
     }else{
         [_popMenu dismissMenu];
     }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [[SocketManager shareManager] sendDataToService:@"sdfhasdiuhfiasuhfs"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -11,7 +11,7 @@
 
 @interface Login : NSObject
 
-@property (nonatomic,strong) NSString *email,*password,*captcha;//captcha:验证码
+@property (nonatomic,strong) NSString *email,*password,*code;//captcha:验证码
 @property (nonatomic,strong) NSNumber *remember_me;
 
 + (BOOL)isLogin;

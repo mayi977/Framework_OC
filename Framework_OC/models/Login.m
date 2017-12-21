@@ -28,8 +28,8 @@ static User *currentUser;
                           @"password":self.password,
                           @"remember_me":self.remember_me ? @"true" : @"false",
                           }.mutableCopy;
-    if (self.captcha.length > 0) {
-        dic[@"captcha"] = self.captcha;
+    if (self.code.length > 0) {
+        dic[@"captcha"] = self.code;
     }
     
     return dic;

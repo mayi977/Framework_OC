@@ -26,6 +26,10 @@
     return nil;
 }
 
+- (id)handleResponse:(id)responseJson{
+    return [self handleResponse:responseJson autoShowError:YES];
+}
+
 - (id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError{
     NSError *error = nil;
     NSInteger code = [[responseJSON valueForKey:@"code"] integerValue];

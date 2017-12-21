@@ -34,19 +34,28 @@
     return self;
 }
 
-- (void)setRequestjsonDataWithPath:(NSString *)aPath withParams:(NSDictionary *)params withMethodType:(MethodType)method complation:(Block)block{
+- (void)setRequestjsonDataWithPath:(NSString *)aPath withParams:(NSDictionary *)params showError:(BOOL)show withMethodType:(MethodType)method complation:(Block)block{
     if (!aPath || aPath.length <= 0) {
         return;
     }
     aPath = [aPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//将汉字转码
     if (method == MethodTypeGet) {
         [self GET:aPath parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
+            id error = [self handleResponse:responseObject autoShowError:show];
+            if (error) {
+                block(nil,error);
+            }else{
+                block(responseObject,nil);
+            }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            //
+            block(nil,error);
         }];
     }else if (method == MethodTypePost){
-        
+        [self POST:aPath parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            block(responseObject,nil);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            block(nil,error);
+        }];
     }
 }
 

@@ -11,6 +11,7 @@
 #import <TPKeyboardAvoidingTableView.h>
 #import "Input_OnlyText_Cell.h"
 #import "RegisterViewController.h"
+#import "NetAPIManager.h"
 
 #define paddingLeftWidth 18.0
 @interface LoginViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -163,7 +164,14 @@
 
 - (void)loginBtnClicked:(id)sender{
      [self.view endEditing:YES];
-    [(AppDelegate *)[UIApplication sharedApplication].delegate setupTabBarController];
+    
+    [[NetAPIManager shareManager] request_login:self.login.code block:^(id data, NSError *error) {
+        if (error) {
+            //展示错误信息
+        }else{
+            [(AppDelegate *)[UIApplication sharedApplication].delegate setupTabBarController];
+        }
+    }];
 }
 
 - (void)cannotLoginBtnClicked:(id)sender{

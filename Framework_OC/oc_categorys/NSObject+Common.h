@@ -11,5 +11,7 @@
 @interface NSObject (Common)
 
 + (NSString *)baseUrlStr;
+- (id)handleResponse:(id)responseJson;
+- (id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError;
 
 @end

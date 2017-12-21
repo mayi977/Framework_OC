@@ -15,6 +15,7 @@
 #import "RootTabBarController.h"
 #import "LoginViewController.h"
 #import "BaseNavigationController.h"
+#import "SocketManager.h"
 
 #define _IPHONE80_ 80000
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
@@ -37,6 +38,8 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     [self registerUserAgent];
     
+    [[SocketManager shareManager] connectToService];
+    
     if ([Login isLogin]) {
 //        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
         [self setupTabBarController];
@@ -52,7 +55,7 @@
     NSLog(@"%@",NSHomeDirectory());
     NSString *userAgent = [NSString userAgent];
     NSDictionary *dic = @{@"userAgent":userAgent};
-    NSLog(@"%@",dic);
+//    NSLog(@"%@",dic);
     [[NSUserDefaults standardUserDefaults] registerDefaults:dic];
 }
 

@@ -193,50 +193,52 @@
 }
 
 - (void)moveToOffset:(CGFloat)offset{
-    NSLog(@"====%f",offset);
+//    NSLog(@"====%f",offset);
     offset = MAX(0, MIN(offset, _items.count));
-    float detla = offset - _currentIndex;
-    CGRect originRect = [_itemFrames[_currentIndex] CGRectValue];
-    CGRect originLineRect = CGRectMake(CGRectGetMinX(originRect) + 20, CGRectGetHeight(originRect) - 3, CGRectGetWidth(originRect) - 40, 3);
-    
-    CGRect rect;
-    if (detla > 0) {
-        //如果detla大于1，不能简单的用相邻item间距的乘法来计算距离
-        if (detla > 1) {
-            self.currentIndex += floor(detla);
-            detla -= floor(detla);
-            originRect = [_itemFrames[_currentIndex] CGRectValue];
-            originLineRect = CGRectMake(CGRectGetMinX(originRect) + 20, CGRectGetHeight(originRect) - 3, CGRectGetWidth(originRect) - 40, 3);
-        }
-        
-        if (_currentIndex == _itemFrames.count - 1) {
-            return;
-        }
-        
-        rect = [_itemFrames[_currentIndex + 1] CGRectValue];
-        
-        CGRect lineRect = CGRectMake(CGRectGetMinX(rect) + 20, CGRectGetHeight(rect) - 3, CGRectGetWidth(rect) - 40, 3);
-        
-        CGRect moveRect = CGRectZero;
-        
-        moveRect.size = CGSizeMake(CGRectGetWidth(originLineRect) + detla * (CGRectGetWidth(lineRect) - CGRectGetWidth(originLineRect)), CGRectGetHeight(lineRect));
-        moveRect.origin = CGPointMake(CGRectGetMidX(originLineRect) + detla * (CGRectGetMidX(lineRect) - CGRectGetMidX(originLineRect)) - CGRectGetMidX(moveRect), CGRectGetMidY(originLineRect) - CGRectGetMidY(moveRect));
-        _lineView.frame = moveRect;
-    } else if (detla < 0){
-        
-        if (_currentIndex == 0) {
-            return;
-        }
-        rect = [_itemFrames[_currentIndex - 1] CGRectValue];
-        CGRect lineRect = CGRectMake(CGRectGetMinX(rect) + 20, CGRectGetHeight(rect) - 3, CGRectGetWidth(rect) - 40, 3);
-        CGRect moveRect = CGRectZero;
-        moveRect.size = CGSizeMake(CGRectGetWidth(originLineRect) - detla * (CGRectGetWidth(lineRect) - CGRectGetWidth(originLineRect)), CGRectGetHeight(lineRect));
-        moveRect.origin = CGPointMake(CGRectGetMidX(originLineRect) - detla * (CGRectGetMidX(lineRect) - CGRectGetMidX(originLineRect)) - CGRectGetMidX(moveRect), CGRectGetMidY(originLineRect) - CGRectGetMidY(moveRect));
-        _lineView.frame = moveRect;
-        if (detla < -1) {
-            self.currentIndex -= 1;
-        }
-    }
+    [self selectedIndex:floor(offset)];
+//    offset = MAX(0, MIN(offset, _items.count));
+//    float detla = offset - _currentIndex;
+//    CGRect originRect = [_itemFrames[_currentIndex] CGRectValue];
+//    CGRect originLineRect = CGRectMake(CGRectGetMinX(originRect) + 20, CGRectGetHeight(originRect) - 3, CGRectGetWidth(originRect) - 40, 3);
+//
+//    CGRect rect;
+//    if (detla > 0) {
+//        //如果detla大于1，不能简单的用相邻item间距的乘法来计算距离
+//        if (detla > 1) {
+//            self.currentIndex += floor(detla);
+//            detla -= floor(detla);
+//            originRect = [_itemFrames[_currentIndex] CGRectValue];
+//            originLineRect = CGRectMake(CGRectGetMinX(originRect) + 20, CGRectGetHeight(originRect) - 3, CGRectGetWidth(originRect) - 40, 3);
+//        }
+//
+//        if (_currentIndex == _itemFrames.count - 1) {
+//            return;
+//        }
+//
+//        rect = [_itemFrames[_currentIndex + 1] CGRectValue];
+//
+//        CGRect lineRect = CGRectMake(CGRectGetMinX(rect) + 20, CGRectGetHeight(rect) - 3, CGRectGetWidth(rect) - 40, 3);
+//
+//        CGRect moveRect = CGRectZero;
+//
+//        moveRect.size = CGSizeMake(CGRectGetWidth(originLineRect) + detla * (CGRectGetWidth(lineRect) - CGRectGetWidth(originLineRect)), CGRectGetHeight(lineRect));
+//        moveRect.origin = CGPointMake(CGRectGetMidX(originLineRect) + detla * (CGRectGetMidX(lineRect) - CGRectGetMidX(originLineRect)) - CGRectGetMidX(moveRect), CGRectGetMidY(originLineRect) - CGRectGetMidY(moveRect));
+//        _lineView.frame = moveRect;
+//    } else if (detla < 0){
+//
+//        if (_currentIndex == 0) {
+//            return;
+//        }
+//        rect = [_itemFrames[_currentIndex - 1] CGRectValue];
+//        CGRect lineRect = CGRectMake(CGRectGetMinX(rect) + 20, CGRectGetHeight(rect) - 3, CGRectGetWidth(rect) - 40, 3);
+//        CGRect moveRect = CGRectZero;
+//        moveRect.size = CGSizeMake(CGRectGetWidth(originLineRect) - detla * (CGRectGetWidth(lineRect) - CGRectGetWidth(originLineRect)), CGRectGetHeight(lineRect));
+//        moveRect.origin = CGPointMake(CGRectGetMidX(originLineRect) - detla * (CGRectGetMidX(lineRect) - CGRectGetMidX(originLineRect)) - CGRectGetMidX(moveRect), CGRectGetMidY(originLineRect) - CGRectGetMidY(moveRect));
+//        _lineView.frame = moveRect;
+//        if (detla < -1) {
+//            self.currentIndex -= 1;
+//        }
+//    }
     
 }
 

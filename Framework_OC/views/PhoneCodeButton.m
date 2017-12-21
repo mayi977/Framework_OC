@@ -48,6 +48,7 @@
     }
     [self setTitle:[NSString stringWithFormat:@"%.0f s",_duration] forState:UIControlStateNormal];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)invalidateTimer{

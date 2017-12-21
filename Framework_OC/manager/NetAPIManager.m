@@ -7,10 +7,11 @@
 //
 
 #import "NetAPIManager.h"
+#import "NetAPIClient.h"
 
 @implementation NetAPIManager
 
-+ (NetAPIManager *)shareManager{
++ (instancetype)shareManager{
     static id manager = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -20,7 +21,9 @@
 }
 
 - (void)request_login:(NSString *)code block:(Block)block{
-    block(@"sadfadsf",nil);
+    [[NetAPIClient shareManager] setRequestjsonDataWithPath:@"Login" withParams:@{} showError:YES withMethodType:MethodTypePost complation:^(id data, NSError *error) {
+        block(data,error);
+    }];
 }
 
 @end

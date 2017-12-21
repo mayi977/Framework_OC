@@ -22,6 +22,10 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 
+#define HOST @"192.168.0.51" //192.168.0.5  //127.0.0.0
+#define PORT 5000
+
+
 #define kWindow [UIApplication sharedApplication].keyWindow
 #define kAppDelegate (AppDelegate)[UIApplication sharedApplication].delegate
 #define kScreen_Bounds [UIScreen mainScreen].bounds

@@ -116,7 +116,7 @@
 		689930891FE9F6C0009A4CF0 /* ZLSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 689930881FE9F6C0009A4CF0 /* ZLSegmentControl.m */; };
 		6899308C1FEA081F009A4CF0 /* ZLSegmentControlItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6899308B1FEA081F009A4CF0 /* ZLSegmentControlItem.m */; };
 		6899308F1FEA42E1009A4CF0 /* ZLSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6899308E1FEA42E1009A4CF0 /* ZLSegmentView.m */; };
-		689930921FEA4394009A4CF0 /* ZLSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689930911FEA4394009A4CF0 /* ZLSegmentViewController.m */; };
+		689930961FEB4443009A4CF0 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 689930951FEB4443009A4CF0 /* SocketManager.m */; };
 		FC8110D313EF701E530A230C /* libPods-Framework_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C346295222068F6E842ADC /* libPods-Framework_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -292,8 +292,8 @@
 		6899308B1FEA081F009A4CF0 /* ZLSegmentControlItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentControlItem.m; sourceTree = "<group>"; };
 		6899308D1FEA42E1009A4CF0 /* ZLSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSegmentView.h; sourceTree = "<group>"; };
 		6899308E1FEA42E1009A4CF0 /* ZLSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentView.m; sourceTree = "<group>"; };
-		689930901FEA4394009A4CF0 /* ZLSegmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSegmentViewController.h; sourceTree = "<group>"; };
-		689930911FEA4394009A4CF0 /* ZLSegmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSegmentViewController.m; sourceTree = "<group>"; };
+		689930941FEB4443009A4CF0 /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		689930951FEB4443009A4CF0 /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
 		873653D431162364EB71C5FB /* libPods-Framework_OCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Framework_OCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D20F9A32EA64F6356B1F00 /* Pods-Framework_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Framework_OC/Pods-Framework_OC.release.xcconfig"; sourceTree = "<group>"; };
 		AF352C0CDCCF072D6A9C28C6 /* Pods-Framework_OCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Framework_OCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Framework_OCUITests/Pods-Framework_OCUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -560,6 +560,7 @@
 				3E7BFF371FDBEE0B00F80082 /* BaseViewController.m */,
 				3E70128D1FDD7C4B00E63418 /* ObjcRuntime.h */,
 				3E70128E1FDD7C4B00E63418 /* ObjcRuntime.m */,
+				689930931FEB4421009A4CF0 /* Socket */,
 				688ECE461FE25B7C00AA3C94 /* manager */,
 				3E7012911FDD912F00E63418 /* views */,
 				3E7012901FDD912300E63418 /* viewControllers */,
@@ -617,10 +618,17 @@
 				6899308B1FEA081F009A4CF0 /* ZLSegmentControlItem.m */,
 				6899308D1FEA42E1009A4CF0 /* ZLSegmentView.h */,
 				6899308E1FEA42E1009A4CF0 /* ZLSegmentView.m */,
-				689930901FEA4394009A4CF0 /* ZLSegmentViewController.h */,
-				689930911FEA4394009A4CF0 /* ZLSegmentViewController.m */,
 			);
 			path = ZLSegmentControl;
+			sourceTree = "<group>";
+		};
+		689930931FEB4421009A4CF0 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				689930941FEB4443009A4CF0 /* SocketManager.h */,
+				689930951FEB4443009A4CF0 /* SocketManager.m */,
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 		7473E2A4AE5A42565E66FB5F /* Pods */ = {
@@ -1015,7 +1023,6 @@
 				3E7BFF681FDC3FB400F80082 /* Tweet_RootViewController.m in Sources */,
 				3E7BFF521FDC2CFD00F80082 /* NSObject+ObjectMap.m in Sources */,
 				3E7BFEEF1FDAF49A00F80082 /* IntroductionViewController.m in Sources */,
-				689930921FEA4394009A4CF0 /* ZLSegmentViewController.m in Sources */,
 				3E7BFF381FDBEE0B00F80082 /* BaseViewController.m in Sources */,
 				3E70128F1FDD7C4B00E63418 /* ObjcRuntime.m in Sources */,
 				6899308C1FEA081F009A4CF0 /* ZLSegmentControlItem.m in Sources */,
@@ -1040,6 +1047,7 @@
 				3E7BFF3C1FDBEE3800F80082 /* LoginViewController.m in Sources */,
 				6887DE901FE78F7B00EC7B19 /* Register.m in Sources */,
 				3E8A3B1F1FD94F12002B3F7D /* AppDelegate.m in Sources */,
+				689930961FEB4443009A4CF0 /* SocketManager.m in Sources */,
 				6887DE881FE753C400EC7B19 /* UIButton+Bootstrap.m in Sources */,
 				3E7BFF311FDAF86300F80082 /* UIColor+expand.m in Sources */,
 				688ECE4C1FE2622A00AA3C94 /* NetAPIClient.m in Sources */,

@@ -10,7 +10,10 @@
 
 @interface NetAPIManager : NSObject
 
++ (instancetype)shareManager;
+
 #pragma mark login
 - (void)request_login:(NSString *)code block:(Block)block;
 
 @end
+
