@@ -24,6 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## Bugly
+
+Copyright 2017 Bugly Tencent. All rights reserved.
+
+
 ## CocoaAsyncSocket
 
 Public Domain License

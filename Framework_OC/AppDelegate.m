@@ -16,6 +16,7 @@
 #import "LoginViewController.h"
 #import "BaseNavigationController.h"
 #import "SocketManager.h"
+#import <Bugly/Bugly.h>
 
 #define _IPHONE80_ 80000
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
@@ -33,6 +34,7 @@
 
     //    [self registerAPNS];//系统
     [self umengAPNS:launchOptions];//友盟
+    [Bugly startWithAppId:@""];
     
     [self customizeInterface];//设置导航条样式
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
@@ -41,7 +43,6 @@
     [[SocketManager shareManager] connectToService];
     
     if ([Login isLogin]) {
-//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
         [self setupTabBarController];
     }else{
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;

@@ -39,6 +39,7 @@ pod 'TTTAttributedLabel', '~> 2.0.0' #是一个常用的富文本开源库，支
 pod 'iCarousel', '~> 1.8.3'  #iCarousel 是一个使用简单、高度自定义的多类型视图切换的控件
 pod 'PopMenu', '~> 2.4' #菜单的动画  关联的库（pop:动画效果，facebook开源；XHRealTimeBlur:毛玻璃效果）
 pod 'ODRefreshControl', '~> 1.2' #下拉刷新
+pod 'Bugly', '~> 2.5.0'
 
 
 

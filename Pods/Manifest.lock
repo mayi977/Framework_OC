@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Bugly (2.5.0)
   - CocoaAsyncSocket (7.6.2)
   - iCarousel (1.8.3)
   - JazzHands (2.0.0)
@@ -47,6 +48,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - Bugly (~> 2.5.0)
   - CocoaAsyncSocket (~> 7.6.2)
   - iCarousel (~> 1.8.3)
   - JazzHands (= 2.0.0)
@@ -68,6 +70,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bugly: 00c8701f2bebab4887771ba43afbf51334009742
   CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   JazzHands: 00002e9b1284e7fc1ac6555012e81b8942477242
@@ -89,6 +92,6 @@ SPEC CHECKSUMS:
   UMessage: f1619a28fdf03190050a67280e181dd422a980dc
   XHRealTimeBlur: 661fadd5691ba2d349758e8fd5fbdb499ac55f8c
 
-PODFILE CHECKSUM: c50f25893d26743df9cf2b414925bbaa56db5276
+PODFILE CHECKSUM: 9575fc76616f5012fbeaeeb1150d0d0421c23a42
 
 COCOAPODS: 1.3.1
