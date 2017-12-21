@@ -10,6 +10,7 @@
 //#import <iCarousel.h>
 #import <PopMenu.h>
 #import "SocketManager.h"
+#import <JDStatusBarNotification.h>
 
 @interface Project_RootViewController ()
 //<iCarouselDelegate,iCarouselDataSource>
@@ -45,10 +46,16 @@
 //        icarousel;
 //    });
     
-    [SocketManager shareManager].receiveBlock = ^(id data) {
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-    };
+    
+    [JDStatusBarNotification showWithStatus:@"sfbasefhhkea"];
+//    [JDStatusBarNotification dismissAfter:5];
+//    [JDStatusBarNotification showProgress:.7];
+    [JDStatusBarNotification showActivityIndicator:YES indicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+//    [SocketManager shareManager].receiveBlock = ^(id data) {
+//        NSLog(@"%@",[NSThread currentThread]);
+//        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+//    };
     
     NSArray *menuItems = @[
                            [MenuItem initWithTitle:@"项目" iconName:@"pop_Project" index:0],
@@ -61,9 +68,9 @@
     _popMenu = [[PopMenu alloc] initWithFrame:CGRectMake(0, 64, kScreen_Width, kScreen_Height - 64) items:menuItems];
     _popMenu.perRowItemCount = 3;
     _popMenu.menuAnimationType = kPopMenuAnimationTypeSina;
-    @weakify(self);
+//    @weakify(self);
     _popMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem) {
-        @strongify(self);
+//        @strongify(self);
         if (!selectedItem) {
             return ;
         }

@@ -165,6 +165,9 @@
 - (void)loginBtnClicked:(id)sender{
      [self.view endEditing:YES];
     
+    [(AppDelegate *)[UIApplication sharedApplication].delegate setupTabBarController];
+    return;
+    
     [[NetAPIManager shareManager] request_login:self.login.code block:^(id data, NSError *error) {
         if (error) {
             //展示错误信息

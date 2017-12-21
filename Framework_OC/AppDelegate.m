@@ -40,13 +40,15 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     [self registerUserAgent];
     
-    [[SocketManager shareManager] connectToService];
+//    [[SocketManager shareManager] connectToService];
     
     if ([Login isLogin]) {
         [self setupTabBarController];
     }else{
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-        [self showIntroductionViewController];
+//        [self showIntroductionViewController];
+        
+        [self setupTabBarController];
     }
     
     return YES;

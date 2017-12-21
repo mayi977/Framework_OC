@@ -15,7 +15,8 @@
 
 + (NSString *)baseUrlStr{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    return [defaults valueForKey:BaseUrlString] ?: BaseUrlString;
+//    return [defaults valueForKey:BaseUrlString] ?: BaseUrlString;
+    return @"https://www.baidu.com";
 }
 
 + (NSString *)tipFromError:(NSError *)error{

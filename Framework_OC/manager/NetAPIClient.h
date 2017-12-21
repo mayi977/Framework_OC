@@ -11,7 +11,7 @@
 
 @interface NetAPIClient : AFHTTPSessionManager
 
-+ (NetAPIClient *)shareManager;
++ (instancetype)shareManager;
 - (void)setRequestjsonDataWithPath:(NSString *)path withParams:(NSDictionary *)params showError:(BOOL)show withMethodType:(MethodType)method complation:(Block)block;
 
 @end

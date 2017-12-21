@@ -10,8 +10,8 @@
 
 @implementation NetAPIClient
 
-+ (NetAPIClient *)shareManager{
-    static NetAPIClient *apiClient = nil;
++ (instancetype)shareManager{
+    static id apiClient = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         apiClient = [[NetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[NSObject baseUrlStr]]];
@@ -22,11 +22,11 @@
 
 - (instancetype)initWithBaseURL:(NSURL *)url{
     if (self = [super initWithBaseURL:url]) {
-        self.responseSerializer = [AFJSONRequestSerializer serializer];
+        self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
         
-        [self.responseSerializer setValue:@"application/json" forKey:@"Accept"];
-        [self.responseSerializer setValue:url.absoluteString forKey:@"Referer"];
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
         
         self.securityPolicy.allowInvalidCertificates = YES;
     }
